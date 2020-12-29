@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from retrieve.views import TestView
+from retrieve.views import BookView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path('', TestView.as_view(), name='home'),
-    # path('', include('retrieve.urls')),
+    path('', BookView.as_view(), name='home'),
 ]
